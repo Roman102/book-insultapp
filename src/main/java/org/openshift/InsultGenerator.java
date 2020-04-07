@@ -20,10 +20,6 @@ public class InsultGenerator {
             String username = System.getenv("POSTGRESQL_USER");
             String password = System.getenv("PGPASSWORD");
 
-            System.out.println(databaseURL);
-            System.out.println(username);
-            System.out.println(password);
-
             Connection connection = DriverManager.getConnection(databaseURL, username, password);
 
             if (connection != null) {
@@ -47,7 +43,6 @@ public class InsultGenerator {
                 connection.close();
             }
         } catch (Exception e) {
-            System.out.println(e.toString());
             return "Database connection problem!";
         }
 
