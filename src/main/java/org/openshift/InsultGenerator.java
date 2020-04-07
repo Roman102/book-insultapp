@@ -43,6 +43,7 @@ public class InsultGenerator {
                 connection.close();
             }
         } catch (Exception e) {
+            System.out.println(e.toString());
             return "Database connection problem!";
         }
 
